@@ -1,23 +1,31 @@
-version: '3.1'
+version: "3.1"
 services:
   database:
     image: "postgres"
     restart: always
-    env_file:
-      - .env
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234567
+      - POSTGRES_DB=vavjs3
     ports:
       - 5432:5432
-  
-#   backend:
-#     build: /backend
-#     ports:
-#       - "8080:3001"
-#     links:
-#       - database
-#     restart: always
 
-#  frontend:
-#    build: /my-app
-#    ports:
-#      - "8080:3000"
-#    restart: always
+  backend:
+    build: ./vavjs3_be
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    links:
+      - database
+    restart: always
+    depends_on:
+      - database
+
+  frontend:
+    build: ./vavjs3_fe
+    ports:
+      - "8080:8080"
+    restart: always
+    depends_on:
+      - backend
