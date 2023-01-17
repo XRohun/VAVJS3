@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.authPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.landingPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #eee;
+  display: flex;
+  flex-direction: row;
+}
+
+.measurements{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.addMeasurement{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.measurementParamBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.userInformation {
+  display: flex;
+  flex-direction: row;
+  width: 100vh;
+  justify-content: space-around;
+  border: 2px solid black;
+}
+
+.advert {
+  position: sticky;
+  height: 50vh;
+  width: 50vh;
+  transform: translate(150%, -150%); 
+  background-color: red;
+}
+
+.activity{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
